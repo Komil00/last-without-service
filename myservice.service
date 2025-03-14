@@ -1,0 +1,13 @@
+[Unit]
+Description=My Python Service
+After=network.target
+
+[Service]
+ExecStart=/app/server_8080/env/bin/python3 /app/server_8080/manage.py runserver 0.0.0.0:8080
+Restart=always
+User=root
+Group=root
+WorkingDirectory=/app
+
+[Install]
+WantedBy=multi-user.target
