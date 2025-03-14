@@ -11,7 +11,7 @@ WORKDIR /app
 COPY server_2000.py server_2001.py server_2002.py server_2003.py /app/
 COPY kali_server.py /app/kali_server.py
 COPY server_8080 /app/server_8080
-COPY myservice.service /etc/systemd/system/myservice.service  # Servis faylni qo‘shish
+COPY ./myservice.service /etc/systemd/system/myservice.service
 
 # Virtual muhit yaratish va kutubxonalarni o‘rnatish
 RUN python3 -m venv /app/server_8080/env && \
